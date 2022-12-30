@@ -21,7 +21,7 @@
             <% if(articles != null) { %>
             <% articles.forEach(function(article, index) { %>
                
-                <a href="/slug/<%- article.slug %>" class="news__card">
+                <a href="/slug/<%- article.slug %>/<%- article.featured_media %>" class="news__card">
                    <!--<img src="<%- article.thumbnail_url %>" alt="<%- article.title.rendered %>">-->
                    
                     <h2><%- article.title.rendered %> &nbsp;<small id="<%- article.id %>"><%- article.date  %></small></h2>
