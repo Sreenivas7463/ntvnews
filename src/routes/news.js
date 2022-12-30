@@ -76,8 +76,8 @@ newsRouter.get('/slug/:slug', async(req, res) => {
     try {
         const newsAPI = await axios.get(`https://ntvtelugu.com/wp-json/wp/v2/posts?slug=${slugID}`)
         console.log(`https://ntvtelugu.com/wp-json/wp/v2/posts?slug=${slugID}`)
-        const newsMedia = await axios.get(`https://ntvtelugu.com/wp-json/wp/v2/media/${mediaID}`) //added image by Sreenivas
-        res.render('newsSlug', { article : newsAPI.data, media: newsMedia.data })
+        
+        res.render('newsSlug', { article : newsAPI.data })
     } catch (err) {
         if(err.response) {
             res.render('newsSlug', { article : null })
