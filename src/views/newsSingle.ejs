@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%- article.title.rendered %></title> 
-    <meta name="description" content="<%- article.excerpt.rendered %>">
+    <title><%- article[0].title.rendered %></title> 
+    <meta name="description" content="<%- article[0].excerpt.rendered %>">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://ntvnews.onrender.com/article/<%- artid %>/<%- mdid %>">
-    <meta property="og:title" content="<%- article.title.rendered %>">
-    <meta property="og:description" content="<%- article.excerpt.rendered %>">
+    <meta property="og:title" content="<%- article[0].title.rendered %>">
+    <meta property="og:description" content="<%- article[0].excerpt.rendered %>">
     <meta property="og:image" content="<%- media.guid.rendered %>">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://ntvnews.onrender.com/">
-    <meta property="twitter:title" content="<%- article.title.rendered %>">
-    <meta property="twitter:description" content="<%- article.excerpt.rendered %>">
+    <meta property="twitter:title" content="<%- article[0].title.rendered %>">
+    <meta property="twitter:description" content="<%- article[0].excerpt.rendered %>">
     <meta property="twitter:image" content="<%- media.guid.rendered %>">  
     <link rel="stylesheet" href="/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
@@ -35,9 +35,9 @@
         <div class="news-single">
                 <a href="/">&larr;- Back </a>
                 <% if(article != null) { %>
-                    <h2><%- article.title.rendered %> &nbsp;<small id="<%- article.id %>"><%- article.date%></small></h2>
+                    <h2><%- article[0].title.rendered %> &nbsp;<small id="<%- article[0].id %>"><%- article[0].date%></small></h2>
                     <img src="<%- media.guid.rendered %>" alt="<%- article.title.rendered %>">
-                    <p><%- article.content.rendered %></p>
+                    <p><%- article[0].content.rendered %></p>
                 <% } else { %>
                     No posts found.
                 <% } %>
