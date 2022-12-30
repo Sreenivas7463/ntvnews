@@ -51,7 +51,7 @@ newsRouter.get('/article/:id/:mid', async(req, res) => {
     let mediaID =  req.params.mid
 
     try {
-        const newsAPI = await axios.get(`https://ntvtelugu.com/wp-json/wp/v2/posts/${articleID}`)
+        const newsAPI = await axios.get(`https://ntvtelugu.com/wp-json/wp/v2/posts?postid=${articleID}`)
         const newsMedia = await axios.get(`https://ntvtelugu.com/wp-json/wp/v2/media/${mediaID}`) //added image by Sreenivas
         res.render('newsSingle', { article : newsAPI.data, media: newsMedia.data })
     } catch (err) {
