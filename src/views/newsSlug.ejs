@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <% article.forEach(function(article, index) { %>
-    <title><%- article.title.rendered %></title> 
-    <meta name="description" content="<%- article.excerpt.rendered %>">
+    <% article.forEach(function(article0, index) { %>
+    <title><%- article0.title.rendered %></title> 
+    <meta name="description" content="<%- article0.excerpt.rendered %>">
     <!-- Open Graph / Facebook -->
    
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://ntvnews.onrender.com/article/<%- artid %>/<%- mdid %>">
-    <meta property="og:title" content="<%- article.title.rendered %>">
-    <meta property="og:description" content="<%- article.excerpt.rendered %>">
+    <meta property="og:title" content="<%- article0.title.rendered %>">
+    <meta property="og:description" content="<%- article0.excerpt.rendered %>">
     <meta property="og:image" content="<%- media.guid.rendered %>">
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://ntvnews.onrender.com/">
-    <meta property="twitter:title" content="<%- article.title.rendered %>">
-    <meta property="twitter:description" content="<%- article.excerpt.rendered %>">
+    <meta property="twitter:title" content="<%- article0.title.rendered %>">
+    <meta property="twitter:description" content="<%- article0.excerpt.rendered %>">
     <meta property="twitter:image" content="<%- media.guid.rendered %>">  
     <% }) %>
     <link rel="stylesheet" href="/css/styles.css">
