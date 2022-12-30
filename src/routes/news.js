@@ -53,7 +53,7 @@ newsRouter.get('/article/:id/:mid', async(req, res) => {
     try {
         const newsAPI = await axios.get(`https://ntvtelugu.com/wp-json/wp/v2/posts?postid=${articleID}`)
         const newsMedia = await axios.get(`https://ntvtelugu.com/wp-json/wp/v2/media/${mediaID}`) //added image by Sreenivas
-        res.render('newsSingle', { article : newsAPI[0].data, media: newsMedia.data })
+        res.render('newsSingle', { article : newsAPI.data[0], media: newsMedia.data })
     } catch (err) {
         if(err.response) {
             res.render('newsSingle', { article : null })
